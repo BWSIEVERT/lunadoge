@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
-// Stylesheet Components
+// Stylesheet
+import './Home.css'
+
+// Styled-Components Stylesheet
 import {
   MainContent,
   Navigation,
@@ -47,12 +50,21 @@ import {
 } from "react-icons/fa";
 import { CgCommunity, CgLock } from "react-icons/cg";
 
+// Components
+import Burger from './Burger'
+import Menu from './Menu'
+
 const Home = () => {
+
+    const [ open, setOpen ] = useState(false);
+
   return (
     <>
       <MainContent>
         <Navigation>
           <NavigationTitleContainer>
+              <Burger open={open} setOpen={setOpen} />
+              <Menu open={open} setOpen={setOpen} />
             <NavigationLinks style={{ marginLeft: "40%" }} href="/">
               Home
             </NavigationLinks>
@@ -63,6 +75,7 @@ const Home = () => {
           </NavigationTitleContainer>
           <NavigationIconsContainer>
             <FaGithub
+                id='reactIcon'
               style={{
                 width: "22px",
                 height: "22px",
@@ -71,6 +84,7 @@ const Home = () => {
               }}
             />
             <FaMedium
+            id='reactIcon'
               style={{
                 width: "22px",
                 height: "22px",
@@ -79,6 +93,7 @@ const Home = () => {
               }}
             />
             <FaTelegram
+            id='reactIcon'
               style={{
                 width: "22px",
                 height: "22px",
@@ -87,6 +102,7 @@ const Home = () => {
               }}
             />
             <FaTwitterSquare
+            id='reactIcon'
               style={{
                 width: "22px",
                 height: "22px",
@@ -95,12 +111,13 @@ const Home = () => {
               }}
             />
             <FaYoutubeSquare
+            id='reactIcon'
               style={{
                 width: "22px",
                 height: "22px",
                 padding: "14px",
                 cursor: "pointer",
-                marginRight: "40%",
+                // marginRight: "40%",
               }}
             />
           </NavigationIconsContainer>
@@ -125,25 +142,21 @@ const Home = () => {
             <DataValues>$?</DataValues>
             <DataDescription>Liquidity</DataDescription>
           </DataSubContainer>
-          <DataSubContainer style={{ marginRight: "9%" }}>
+          <DataSubContainer>
             <DataValues>$2,357,311</DataValues>
             <DataDescription>Market Cap</DataDescription>
           </DataSubContainer>
         </DataContainer>
       </MainContent>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
       <FeatureContainer>
-        <FeatureContentContainer style={{ marginLeft: "12%" }}>
+        <FeatureContentContainer>
           <CgCommunity
             style={{
               width: "100px",
               height: "100px",
               padding: "0",
               marginBottom: "10%",
+              color: '35B7FF'
             }}
           />
           <FeatureContentTitle>100% Community Driven</FeatureContentTitle>
@@ -167,6 +180,7 @@ const Home = () => {
               height: "100px",
               padding: "0",
               marginBottom: "10%",
+              color: '35B7FF'
             }}
           />
           <FeatureContentTitle>Liquidity Locked</FeatureContentTitle>
@@ -178,13 +192,14 @@ const Home = () => {
             this possible.
           </FeatureContentDescription>
         </FeatureContentContainer>
-        <FeatureContentContainer style={{ marginRight: "12%" }}>
+        <FeatureContentContainer>
           <FaHandHoldingUsd
             style={{
               width: "100px",
               height: "100px",
               padding: "0",
               marginBottom: "10%",
+              color: '35B7FF'
             }}
           />
           <FeatureContentTitle>Hold and Earn</FeatureContentTitle>
@@ -210,61 +225,61 @@ const Home = () => {
           <RoadMapContentDescriptionContainer>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
               />
               Token launch
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
               />
               Website
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
               />
               Github project start
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Marketing campaign
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Giveaways and community contests
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Coingecko listing
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Coinmarketcap listing
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Charity event
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               External audit
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Website improvements
             </RoadMapContentDescription>
@@ -273,31 +288,31 @@ const Home = () => {
           <RoadMapContentDescriptionContainer>
             <RoadMapContentDescription>
             <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               LunaDoge Mars Program
             </RoadMapContentDescription>
             <RoadMapContentDescription>
             <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Cross-chain integration
             </RoadMapContentDescription>
             <RoadMapContentDescription>
             <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Token farming
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Partnership rollout
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px" }}
+                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
               />
               Community growth
             </RoadMapContentDescription>
@@ -313,11 +328,12 @@ const Home = () => {
                   LunaDoge is a fork of MoonRat and Safemoon. Both projects have been audited by CertiK, assuring users that there is no backdoor in the code for the team to scam its investors.
               </FooterContentDescription>
               <FooterContentDescription style={{marginTop: '10%'}}>
-              © 2021 | All Right Reserved.
+              © 2021 LunaDoge | All Right Reserved.
               </FooterContentDescription>
           </FooterContentContainer>
           <FooterIconsContainer>
           <FaGithub
+          id='reactIcon'
               style={{
                 width: "30px",
                 height: "30px",
@@ -326,6 +342,7 @@ const Home = () => {
               }}
             />
             <FaMedium
+            id='reactIcon'
               style={{
                 width: "30px",
                 height: "30px",
@@ -334,6 +351,7 @@ const Home = () => {
               }}
             />
             <FaTelegram
+            id='reactIcon'
               style={{
                 width: "30px",
                 height: "30px",
@@ -342,6 +360,7 @@ const Home = () => {
               }}
             />
             <FaTwitterSquare
+            id='reactIcon'
               style={{
                 width: "30px",
                 height: "30px",
@@ -350,6 +369,7 @@ const Home = () => {
               }}
             />
             <FaYoutubeSquare
+            id='reactIcon'
               style={{
                 width: "30px",
                 height: "30px",
