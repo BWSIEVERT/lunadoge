@@ -1,0 +1,13 @@
+#reactIcon {
+    color: #fff;
+    transition: 0.5s;
+}
+
+#reactIcon:hover {
+    color: #00FFFF;
+    transition: 0.5s;
+}
+
+html {
+    background-color: #111111;
+}
