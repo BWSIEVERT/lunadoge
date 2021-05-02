@@ -33,7 +33,7 @@ export const NavigationLinks = styled.a`
 text-decoration: none;
 font-size: 14px;
 color: black;
-padding: 14px;
+padding: 11px;
 transition: 0.5s;
 &:hover {
     color: #7332;
