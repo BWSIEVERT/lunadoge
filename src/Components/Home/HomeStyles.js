@@ -179,6 +179,7 @@ height: 13.5%;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+border: 1px solid black;
 @media ${device.mobileL} {
     flex-direction: column;
     height: 44%;
@@ -189,6 +190,13 @@ align-items: center;
     height: 13.5%;
     justify-content: space-evenly;
 }
+`;
+
+export const DataButtonContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 15%;
 `;
 
 export const LiveChartButton = styled.button`
@@ -262,13 +270,13 @@ margin-top: 6%;
 @media ${device.tablet} {
     width: 100%;
     height: auto;
-    flex-direction: column;
     margin-bottom: 12%;
     margin-top: 12%;
 }
 @media ${device.laptop} {
     height: auto;
     flex-direction: column;
+    justify-content: space-evenly;
     margin-bottom: 8%;
     margin-top: 8%;
 }
@@ -352,6 +360,9 @@ align-items: center;
     display: none;
 }
 @media ${device.tablet} {
+    display: none;
+}
+@media ${device.laptop} {
     display: initial;
 }
 `;
@@ -368,9 +379,9 @@ flex-direction: column;
 }
 @media ${device.tablet} {
     width: 80%;
-    }
+}
 @media ${device.laptop} {
-width: 50%;
+    width: 35%;
 }
 `;
 
