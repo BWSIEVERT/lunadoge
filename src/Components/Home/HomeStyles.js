@@ -279,6 +279,7 @@ margin-top: 6%;
     justify-content: space-evenly;
     margin-bottom: 8%;
     margin-top: 8%;
+    margin-top: 8%;
 }
 @media ${device.laptopL} {
     width: 80%
