@@ -412,6 +412,9 @@ align-items: center;
 @media ${device.laptop} {
     height: 80vh;
 }
+@media ${device.laptopL} {
+    height: 100vh;
+}
 `;
 
 export const RoadMapImageContainer = styled.div`
@@ -434,6 +437,9 @@ align-items: center;
 }
 @media ${device.laptopL} {
     display: initial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 `;
 
