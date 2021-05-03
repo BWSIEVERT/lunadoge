@@ -36,6 +36,10 @@ background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.2)), u
 background-repeat: no-repeat;
 background-size: cover;
 box-shadow:0px 2px 2px #333;
+@media ${device.mobileM} {
+    height: 90vh;
+    box-shadow: none;
+}
 @media ${device.mobileL} {
     height: 90vh;
     box-shadow: none;
@@ -73,6 +77,16 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
+@media ${device.mobileM} {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    justify-content: flex-start;
+}
 @media ${device.mobileL} {
     width: 20%;
     height: 50%;
@@ -114,6 +128,9 @@ transition: 0.5s;
     color: #00FFFF;
     transition: color 0.5s;
 }
+@media ${device.mobileM} {
+    display: none;
+}
 @media ${device.mobileL} {
     display: none;
 }
@@ -134,6 +151,9 @@ height: 80%;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileM} {
+    height: 50%;
+}
 @media ${device.mobileL} {
     height: 50%;
 }
@@ -149,6 +169,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+@media ${device.mobileM} {
+    height: 10%;
+}
 @media ${device.mobileL} {
     height: 10%;
 }
@@ -179,6 +202,11 @@ height: 13.5%;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+@media ${device.mobileM} {
+    flex-direction: column;
+    height: 44%;
+    justify-content: space-evenly;
+}
 @media ${device.mobileL} {
     flex-direction: column;
     height: 44%;
@@ -188,6 +216,22 @@ align-items: center;
     flex-direction: row;
     height: 13.5%;
     justify-content: space-evenly;
+}
+`;
+
+export const DataButtonContainer = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+width: 15%;
+@media ${device.mobileM} {
+    width: 40%;
+}
+@media ${device.mobileL} {
+    width: 30%;
+}
+@media ${device.tablet} {
+    width: 15%;
 }
 `;
 
@@ -206,6 +250,9 @@ color: 	#1e1e1e;
 &:hover {
     opacity: 0.8;
     transition: opacity 0.6s;
+}
+@media ${device.mobileM} {
+    margin-left: 0;
 }
 @media ${device.mobileL} {
     margin-left: 0;
@@ -251,6 +298,14 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 6%;
+@media ${device.mobileM} {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 12%;
+    margin-top: 12%;
+    justify-content: center;
+}
 @media ${device.mobileL} {
     width: auto;
     height: auto;
@@ -262,14 +317,15 @@ margin-top: 6%;
 @media ${device.tablet} {
     width: 100%;
     height: auto;
-    flex-direction: column;
     margin-bottom: 12%;
     margin-top: 12%;
 }
 @media ${device.laptop} {
     height: auto;
     flex-direction: column;
+    justify-content: space-evenly;
     margin-bottom: 8%;
+    margin-top: 8%;
     margin-top: 8%;
 }
 @media ${device.laptopL} {
@@ -290,6 +346,13 @@ flex-direction: column;
 background-color: #3A3A3A;
 padding: 1.5rem;
 border-radius: 8px;
+@media ${device.mobileM} {
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+}
 @media ${device.mobileL} {
     justify-content: center;
     width: auto;
@@ -340,6 +403,15 @@ height: 80vh;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileM} {
+    height: 60vh;
+}
+@media ${device.tablet} {
+    height: 70vh;
+}
+@media ${device.laptop} {
+    height: 80vh;
+}
 `;
 
 export const RoadMapImageContainer = styled.div`
@@ -348,10 +420,19 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileM} {
+    display: none;
+}
 @media ${device.mobileL} {
     display: none;
 }
 @media ${device.tablet} {
+    display: none;
+}
+@media ${device.laptop} {
+    display: none;
+}
+@media ${device.laptopL} {
     display: initial;
 }
 `;
@@ -363,14 +444,26 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+@media ${device.mobileM} {
+    width: 92%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 @media ${device.mobileL} {
     width: 100%;
 }
 @media ${device.tablet} {
     width: 80%;
-    }
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
 @media ${device.laptop} {
-width: 50%;
+    width: 80%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 `;
 
@@ -398,6 +491,9 @@ margin-right: 5%
 text-align: left;
 font-size: 18px;
 color: rgb(167,168,168);
+@media ${device.mobileM} {
+    font-size: 12px;
+}
 @media ${device.mobileL} {
     font-size: 12px;
 }
@@ -416,6 +512,12 @@ width: 100%;
 height: 25vh;
 display: flex;
 justify-content: center;
+@media ${device.mobileM} {
+    height: 25vh;
+}
+@media ${device.mobileL} {
+    height: 25vh;
+}
 `;
 
 export const FooterContentContainer = styled.div`
@@ -424,8 +526,13 @@ height: 100%;
 display: flex;
 justify-content: flex-start;
 flex-direction: column;
+@media ${device.mobileM} {
+    margin-left: 2%;
+    width: auto;
+}
 @media ${device.mobileL} {
-    width: 75%;
+    width: 95%;
+    margin-left: 0;
 }
 @media ${device.tablet} {
     width: 75%;
@@ -441,11 +548,18 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
+@media ${device.mobileM} {
+    height: 10%;
+    width: 62%;
+    margin-top: 35%;
+    margin-right: 42%;
+    position: absolute;
+}
 @media ${device.mobileL} {
     height: 10%;
     width: 50%;
-    margin-top: 37%;
-    margin-right: 30%;
+    margin-top: 33%;
+    margin-right: 51%;
     position: absolute;
 }
 @media ${device.tablet} {
@@ -475,4 +589,10 @@ padding: 0;
 margin: 0;
 font-size: 16px;
 color: #A6A7A7;
+@media ${device.mobileM} {
+    font-size: 15px;
+}
+@media ${device.mobileL} {
+    font-size: 16px;
+}
 `;

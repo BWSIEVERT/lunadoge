@@ -34,7 +34,8 @@ import {
   FooterContentContainer,
   FooterIconsContainer,
   FooterContentTitle,
-  FooterContentDescription
+  FooterContentDescription,
+  DataButtonContainer
 } from "./HomeStyles";
 
 // Icons
@@ -129,7 +130,9 @@ const Home = () => {
           </HeroContent>
         </HeroContentContainer>
         <DataContainer>
+        <DataButtonContainer>
           <LiveChartButton>Live Chart</LiveChartButton>
+          </DataButtonContainer>
           <DataSubContainer>
             <DataValues>$0.000000002349</DataValues>
             <DataDescription>Value</DataDescription>
