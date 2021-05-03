@@ -15,6 +15,9 @@ export const StyledMenu = styled.nav`
   top: 0;
   left: 0;
   transition: transform 0.3s ease-in-out;
+  background-color: #111111;
+  width: 100%;
+  position: fixed;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
 
   a {
@@ -24,7 +27,13 @@ export const StyledMenu = styled.nav`
     font-weight: bold;
     letter-spacing: 0.5rem;
     text-decoration: none;
-    transition: color 0.3s linear;
+    transition: 0.5s;
+    font-family: open sans;
+    color: #fff;
+    &:hover {
+        color: #00FFFF;
+    transition: color 0.5s;
+    }
   }
 `;
 
@@ -35,16 +44,19 @@ const Menu = ({ open }) => {
     return (
         <StyledMenu open={open}>
       <a href="/">
-        <span role="img" aria-label="about us">&#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;</span>
-        About us
+          Home
       </a>
       <a href="/">
-        <span role="img" aria-label="price">&#x1f4b8;</span>
-        Pricing
+          About
         </a>
       <a href="/">
-        <span role="img" aria-label="contact">&#x1f4e9;</span>
-        Contact
+          White Paper
+        </a>
+        <a href="/">
+          How to Buy
+        </a>
+        <a href="/">
+          Our Team
         </a>
     </StyledMenu>
     )
