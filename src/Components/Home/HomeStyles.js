@@ -14,6 +14,8 @@ export const size = {
     laptop: '1024px',
     laptopL: '1440px',
     desktop: '2560px',
+    customOne: '865px',
+    customTwo: '969px'
 }
 
 // Media Queries for devices
@@ -36,15 +38,24 @@ background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.2)), u
 background-repeat: no-repeat;
 background-size: cover;
 box-shadow:0px 2px 2px #333;
+@media ${device.mobileS} {
+    background-image: none;
+    height: 80vh;
+    box-shadow: none;
+    width: 100%;
+}
 @media ${device.mobileM} {
+    background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.2)), url(${LunaDogeHero});
     height: 90vh;
     box-shadow: none;
 }
 @media ${device.mobileL} {
+    background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.2)), url(${LunaDogeHero});
     height: 90vh;
     box-shadow: none;
 }
 @media ${device.tablet} {
+    background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(0, 0, 0, 0.2)), url(${LunaDogeHero});
     height: 70vh;
 }
 `;
@@ -60,6 +71,9 @@ width: 50%;
 height: 100%;
 display: flex;
 align-items: center;
+@media ${device.mobileS} {
+    width: 0;
+}
 @media ${device.tablet} {
     width: 0;
 }
@@ -77,6 +91,16 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
+@media ${device.mobileS} {
+    width: 20%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    justify-content: flex-start;
+}
 @media ${device.mobileM} {
     width: 20%;
     height: 50%;
@@ -128,6 +152,9 @@ transition: 0.5s;
     color: #00FFFF;
     transition: color 0.5s;
 }
+@media ${device.mobileS} {
+    display: none;
+}
 @media ${device.mobileM} {
     display: none;
 }
@@ -151,6 +178,9 @@ height: 80%;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileS} {
+    height: 50%;
+}
 @media ${device.mobileM} {
     height: 50%;
 }
@@ -169,14 +199,23 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+@media ${device.mobileS} {
+    width: 100%;
+    height: 50%;
+    margin-right: 10%;
+}
 @media ${device.mobileM} {
+    width: 50%;
     height: 10%;
+    margin-right: 0;
 }
 @media ${device.mobileL} {
     height: 10%;
+    margin-right: 0;
 }
 @media ${device.tablet} {
     height: 50%;
+    margin-right: 0;
 }
 `;
 
@@ -202,6 +241,11 @@ height: 13.5%;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+@media ${device.mobileS} {
+    flex-direction: column;
+    height: 44%;
+    justify-content: space-evenly;
+}
 @media ${device.mobileM} {
     flex-direction: column;
     height: 44%;
@@ -224,6 +268,9 @@ display: flex;
 justify-content: center;
 align-items: center;
 width: 15%;
+@media ${device.mobileS} {
+    width: 40%;
+}
 @media ${device.mobileM} {
     width: 40%;
 }
@@ -251,6 +298,9 @@ color: 	#1e1e1e;
     opacity: 0.8;
     transition: opacity 0.6s;
 }
+@media ${device.mobileS} {
+    margin-left: 0;
+}
 @media ${device.mobileM} {
     margin-left: 0;
 }
@@ -266,6 +316,9 @@ export const DataSubContainer = styled.div`
 display: flex;
 align-items: center;
 flex-direction: column;
+@media ${device.mobileS} {
+    padding: 4%;
+}
 @media ${device.mobileL} {
     padding: 4%;
 }
@@ -298,6 +351,14 @@ display: flex;
 justify-content: space-evenly;
 align-items: center;
 margin-top: 6%;
+@media ${device.mobileS} {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 12%;
+    margin-top: 12%;
+    justify-content: center;
+}
 @media ${device.mobileM} {
     width: 100%;
     height: auto;
@@ -346,6 +407,13 @@ flex-direction: column;
 background-color: #3A3A3A;
 padding: 1.5rem;
 border-radius: 8px;
+@media ${device.mobileS} {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+    border-bottom: 1px solid black;
+}
 @media ${device.mobileM} {
     justify-content: center;
     width: auto;
@@ -403,6 +471,9 @@ height: 80vh;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileS} {
+    height: auto;
+}
 @media ${device.mobileM} {
     height: 60vh;
 }
@@ -410,7 +481,7 @@ align-items: center;
     height: 70vh;
 }
 @media ${device.laptop} {
-    height: 80vh;
+    height: 90vh;
 }
 @media ${device.laptopL} {
     height: 100vh;
@@ -423,6 +494,9 @@ height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
+@media ${device.mobileS} {
+    display: none;
+}
 @media ${device.mobileM} {
     display: none;
 }
@@ -450,6 +524,12 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-direction: column;
+@media ${device.mobileS} {
+    width: 92%;
+    height: auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 @media ${device.mobileM} {
     width: 92%;
     height: auto;
@@ -458,6 +538,7 @@ flex-direction: column;
 }
 @media ${device.mobileL} {
     width: 100%;
+    margin-left: 6%;
 }
 @media ${device.tablet} {
     width: 80%;
@@ -497,6 +578,9 @@ margin-right: 5%
 text-align: left;
 font-size: 18px;
 color: rgb(167,168,168);
+@media ${device.mobileS} {
+    font-size: 12px;
+}
 @media ${device.mobileM} {
     font-size: 12px;
 }
@@ -532,6 +616,10 @@ height: 100%;
 display: flex;
 justify-content: flex-start;
 flex-direction: column;
+@media ${device.mobileS} {
+    margin-left: 2%;
+    width: auto;
+}
 @media ${device.mobileM} {
     margin-left: 2%;
     width: auto;
@@ -554,6 +642,13 @@ height: 100%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
+@media ${device.mobileS} {
+    height: 10%;
+    width: 66%;
+    margin-top: 44%;
+    margin-right: 38%;
+    position: absolute;
+}
 @media ${device.mobileM} {
     height: 10%;
     width: 62%;
@@ -575,6 +670,7 @@ align-items: center;
     margin-right: 49%;
     position: absolute;
 }
+
 @media ${device.laptop} {
     height: 100%;
     width: 35%;
@@ -595,6 +691,9 @@ padding: 0;
 margin: 0;
 font-size: 16px;
 color: #A6A7A7;
+@media ${device.mobileS} {
+    font-size: 14px;
+}
 @media ${device.mobileM} {
     font-size: 15px;
 }
