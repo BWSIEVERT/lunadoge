@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 // Stylesheet
-import './Home.css'
+import "./Home.css";
 
 // Styled-Components Stylesheet
 import {
@@ -35,7 +35,7 @@ import {
   FooterIconsContainer,
   FooterContentTitle,
   FooterContentDescription,
-  DataButtonContainer
+  DataButtonContainer,
 } from "./HomeStyles";
 
 // Icons
@@ -52,20 +52,19 @@ import {
 import { CgCommunity, CgLock } from "react-icons/cg";
 
 // Components
-import Burger from './Burger'
-import Menu from './Menu'
+import Burger from "./Burger";
+import Menu from "./Menu";
 
 const Home = () => {
-
-    const [ open, setOpen ] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <MainContent>
         <Navigation>
           <NavigationTitleContainer>
-              <Burger open={open} setOpen={setOpen} />
-              <Menu open={open} setOpen={setOpen} />
+            <Burger open={open} setOpen={setOpen} />
+            <Menu open={open} setOpen={setOpen} />
             <NavigationLinks style={{ marginLeft: "40%" }} href="/">
               Home
             </NavigationLinks>
@@ -75,52 +74,107 @@ const Home = () => {
             <NavigationLinks href="/">Our Team</NavigationLinks>
           </NavigationTitleContainer>
           <NavigationIconsContainer>
-            <FaGithub
-                id='reactIcon'
+            <a
+              href="https://github.com/LunaDogeFinance/LunaDoge"
+              class="icon-block"
               style={{
-                width: "22px",
-                height: "22px",
-                padding: "14px",
-                cursor: "pointer",
+                textDecoration: "none",
+                margin: "0",
+                padding: "0",
+                marginTop: "1%",
               }}
-            />
-            <FaMedium
-            id='reactIcon'
+            >
+              <FaGithub
+                id="reactIcon"
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  padding: "14px",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <a
+              href="https://lunadoge.medium.com/"
+              class="icon-block"
               style={{
-                width: "22px",
-                height: "22px",
-                padding: "14px",
-                cursor: "pointer",
+                textDecoration: "none",
+                margin: "0",
+                padding: "0",
+                marginTop: "1%",
               }}
-            />
-            <FaTelegram
-            id='reactIcon'
+            >
+              <FaMedium
+                id="reactIcon"
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  padding: "14px",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <a
+              href="https://t.me/lunadogecrypto"
+              class="icon-block"
               style={{
-                width: "22px",
-                height: "22px",
-                padding: "14px",
-                cursor: "pointer",
+                textDecoration: "none",
+                margin: "0",
+                padding: "0",
+                marginTop: "1%",
               }}
-            />
-            <FaTwitterSquare
-            id='reactIcon'
+            >
+              <FaTelegram
+                id="reactIcon"
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  padding: "14px",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <a
+              href="https://twitter.com/Luna_Doge"
+              class="icon-block"
               style={{
-                width: "22px",
-                height: "22px",
-                padding: "14px",
-                cursor: "pointer",
+                textDecoration: "none",
+                margin: "0",
+                padding: "0",
+                marginTop: "1%",
               }}
-            />
-            <FaYoutubeSquare
-            id='reactIcon'
+            >
+              <FaTwitterSquare
+                id="reactIcon"
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  padding: "14px",
+                  cursor: "pointer",
+                }}
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=wzYZCexMBAw"
+              class="icon-block"
               style={{
-                width: "22px",
-                height: "22px",
-                padding: "14px",
-                cursor: "pointer",
-                // marginRight: "40%",
+                textDecoration: "none",
+                margin: "0",
+                padding: "0",
+                marginTop: "1%",
               }}
-            />
+            >
+              <FaYoutubeSquare
+                id="reactIcon"
+                style={{
+                  width: "22px",
+                  height: "22px",
+                  padding: "14px",
+                  cursor: "pointer",
+                  // marginRight: "40%",
+                }}
+              />
+            </a>
           </NavigationIconsContainer>
         </Navigation>
         <HeroContentContainer>
@@ -130,8 +184,8 @@ const Home = () => {
           </HeroContent>
         </HeroContentContainer>
         <DataContainer>
-        <DataButtonContainer>
-          <LiveChartButton>Live Chart</LiveChartButton>
+          <DataButtonContainer>
+            <LiveChartButton>Live Chart</LiveChartButton>
           </DataButtonContainer>
           <DataSubContainer>
             <DataValues>$0.000000002349</DataValues>
@@ -159,7 +213,7 @@ const Home = () => {
               height: "100px",
               padding: "0",
               marginBottom: "10%",
-              color: '35B7FF'
+              color: "35B7FF",
             }}
           />
           <FeatureContentTitle>100% Community Driven</FeatureContentTitle>
@@ -183,7 +237,7 @@ const Home = () => {
               height: "100px",
               padding: "0",
               marginBottom: "10%",
-              color: '35B7FF'
+              color: "35B7FF",
             }}
           />
           <FeatureContentTitle>Liquidity Locked</FeatureContentTitle>
@@ -202,7 +256,7 @@ const Home = () => {
               height: "100px",
               padding: "0",
               marginBottom: "10%",
-              color: '35B7FF'
+              color: "35B7FF",
             }}
           />
           <FeatureContentTitle>Hold and Earn</FeatureContentTitle>
@@ -228,94 +282,171 @@ const Home = () => {
           <RoadMapContentDescriptionContainer>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#2dce89",
+                }}
               />
               Token launch
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#2dce89",
+                }}
               />
               Website
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaCheck
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#2dce89' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#2dce89",
+                }}
               />
               Github project start
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Marketing campaign
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Giveaways and community contests
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Coingecko listing
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Coinmarketcap listing
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Charity event
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               External audit
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Website improvements
             </RoadMapContentDescription>
           </RoadMapContentDescriptionContainer>
-          <RoadMapContentTitle style={{marginTop: '2%'}}>Q3 - 2021</RoadMapContentTitle>
+          <RoadMapContentTitle style={{ marginTop: "2%" }}>
+            Q3 - 2021
+          </RoadMapContentTitle>
           <RoadMapContentDescriptionContainer>
             <RoadMapContentDescription>
-            <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+              <FaChevronRight
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               LunaDoge Mars Program
             </RoadMapContentDescription>
             <RoadMapContentDescription>
-            <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+              <FaChevronRight
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Cross-chain integration
             </RoadMapContentDescription>
             <RoadMapContentDescription>
-            <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+              <FaChevronRight
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Token farming
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Partnership rollout
             </RoadMapContentDescription>
             <RoadMapContentDescription>
               <FaChevronRight
-                style={{ marginRight: "3%", width: "15px", height: "15px", color: '#FB6340' }}
+                style={{
+                  marginRight: "3%",
+                  width: "15px",
+                  height: "15px",
+                  color: "#FB6340",
+                }}
               />
               Community growth
             </RoadMapContentDescription>
@@ -323,20 +454,30 @@ const Home = () => {
         </RoadMapContentContainer>
       </RoadMapContainer>
       <FooterContainer>
-          <FooterContentContainer>
-              <FooterContentTitle>
-                  LunaDoge
-              </FooterContentTitle>
-              <FooterContentDescription>
-                  LunaDoge is a fork of MoonRat and Safemoon. Both projects have been audited by CertiK, assuring users that there is no backdoor in the code for the team to scam its investors.
-              </FooterContentDescription>
-              <FooterContentDescription style={{marginTop: '10%'}}>
-              © 2021 LunaDoge | All Right Reserved.
-              </FooterContentDescription>
-          </FooterContentContainer>
-          <FooterIconsContainer>
-          <FaGithub
-          id='reactIcon'
+        <FooterContentContainer>
+          <FooterContentTitle>LunaDoge</FooterContentTitle>
+          <FooterContentDescription>
+            LunaDoge is a fork of MoonRat and Safemoon. Both projects have been
+            audited by CertiK, assuring users that there is no backdoor in the
+            code for the team to scam its investors.
+          </FooterContentDescription>
+          <FooterContentDescription style={{ marginTop: "10%" }}>
+            © 2021 LunaDoge | All Right Reserved.
+          </FooterContentDescription>
+        </FooterContentContainer>
+        <FooterIconsContainer>
+          <a
+            href="https://github.com/LunaDogeFinance/LunaDoge"
+            class="icon-block"
+            style={{
+              textDecoration: "none",
+              margin: "0",
+              padding: "0",
+              marginTop: "1%",
+            }}
+          >
+            <FaGithub
+              id="reactIcon"
               style={{
                 width: "30px",
                 height: "30px",
@@ -344,8 +485,19 @@ const Home = () => {
                 cursor: "pointer",
               }}
             />
+          </a>
+          <a
+            href="https://lunadoge.medium.com/"
+            class="icon-block"
+            style={{
+              textDecoration: "none",
+              margin: "0",
+              padding: "0",
+              marginTop: "1%",
+            }}
+          >
             <FaMedium
-            id='reactIcon'
+              id="reactIcon"
               style={{
                 width: "30px",
                 height: "30px",
@@ -353,8 +505,19 @@ const Home = () => {
                 cursor: "pointer",
               }}
             />
+          </a>
+          <a
+            href="https://t.me/lunadogecrypto"
+            class="icon-block"
+            style={{
+              textDecoration: "none",
+              margin: "0",
+              padding: "0",
+              marginTop: "1%",
+            }}
+          >
             <FaTelegram
-            id='reactIcon'
+              id="reactIcon"
               style={{
                 width: "30px",
                 height: "30px",
@@ -362,8 +525,19 @@ const Home = () => {
                 cursor: "pointer",
               }}
             />
+          </a>
+          <a
+            href="https://twitter.com/Luna_Doge"
+            class="icon-block"
+            style={{
+              textDecoration: "none",
+              margin: "0",
+              padding: "0",
+              marginTop: "1%",
+            }}
+          >
             <FaTwitterSquare
-            id='reactIcon'
+              id="reactIcon"
               style={{
                 width: "30px",
                 height: "30px",
@@ -371,8 +545,19 @@ const Home = () => {
                 cursor: "pointer",
               }}
             />
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=wzYZCexMBAw"
+            class="icon-block"
+            style={{
+              textDecoration: "none",
+              margin: "0",
+              padding: "0",
+              marginTop: "1%",
+            }}
+          >
             <FaYoutubeSquare
-            id='reactIcon'
+              id="reactIcon"
               style={{
                 width: "30px",
                 height: "30px",
@@ -380,7 +565,8 @@ const Home = () => {
                 cursor: "pointer",
               }}
             />
-          </FooterIconsContainer>
+          </a>
+        </FooterIconsContainer>
       </FooterContainer>
     </>
   );
