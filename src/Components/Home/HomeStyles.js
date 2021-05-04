@@ -646,28 +646,28 @@ align-items: center;
     height: 10%;
     width: 66%;
     margin-top: 44%;
-    margin-right: 38%;
+    margin-left: 10%;
     position: absolute;
 }
 @media ${device.mobileM} {
     height: 10%;
     width: 62%;
     margin-top: 35%;
-    margin-right: 42%;
+    margin-right: 11%;
     position: absolute;
 }
 @media ${device.mobileL} {
     height: 10%;
     width: 50%;
     margin-top: 33%;
-    margin-right: 51%;
+    margin-right: 15%;
     position: absolute;
 }
 @media ${device.tablet} {
     height: 10%;
     width: 30%;
     margin-top: 16%;
-    margin-right: 49%;
+    margin-right: 33%;
     position: absolute;
 }
 
